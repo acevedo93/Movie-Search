@@ -1,0 +1,91 @@
+/*---------------Styles----------*/
+@import url('https://fonts.googleapis.com/css?family=Jaldi');
+//colors
+
+$borderColor : #C1C8D2;
+$background :#2F343B ;
+$searchColor :#0D151E;
+// Basic reset Styles//
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Jaldi', sans-serif;
+    
+}
+    .container{
+        width:80%;
+        margin : 20px auto;
+        &-search{
+            text-align:center;
+            margin-bottom:10px;
+            width: 100%;
+            border-bottom:1px solid $borderColor;
+            opacity: 8;
+            .search-input{
+                color:white;
+                margin:10px 0 10px 0;
+                background-color: $searchColor;
+                text-align: center;
+                border:none;
+                border-radius:10px;
+                width:30%;
+                height: 1.5em;
+                font-size:2em;
+                transition : .5s;
+                &:focus{
+                    width:60%;   
+                    border:none;
+                }
+            }
+            .search-button{
+                border:none;
+                background:none;
+                i{
+                    line-height: 50px;
+                    font-size: 2em;   
+                }
+            }
+        }
+        &-result{
+            .result-movie{
+                margin-top:20px;
+                display:flex;
+                background:$background;
+                color:$borderColor;
+                box-shadow: 1px 1px 2px black;
+                transition: .3s;
+                .movie-img{
+                   width: 50%;
+                   min-width: 20%;
+                   height: 100%;
+                   margin: 2px;
+                }
+                &:hover{
+                    border: $background;
+                    box-shadow: 5px 1px 10px #31353A;                    
+                }
+                
+            }
+        }
+    }
+
+@media screen and(min-width :600px){
+    .container-result{
+        margin : 0 auto;
+        width: 100%;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        .result-movie{
+            width:31%;
+            height: 200px;
+            flex:none;
+            margin-bottom:2%;
+           
+        .movie-img{
+              width:50%; 
+          }
+        }
+    }
+}
